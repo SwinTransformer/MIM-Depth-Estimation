@@ -45,7 +45,7 @@ You can download pretrained models and our well-trained models from zoo([OneDriv
 - Training with model (KITTI Swin-Large)
   
   ```
-  $ python3 train.py --dataset kitti --kitti_crop garg_crop --data_path ../data/ --max_depth 80.0 --max_depth_eval 80.0 --backbone swin_base_v2 --depths 2 2 18 2 --num_filters 32 32 32 --deconv_kernels 2 2 2 --window_size 22 22 22 11 --pretrain_window_size 12 12 12 6 --use_shift True True False False --flip_test --shift_window_test --shift_size 16 --pretrained weights/swin_v2_large_simmim.pth --save_model --crop_h 352 --crop_w 352 --layer_decay 0.85 --drop_path_rate 0.5 --log_dir logs/ 
+  $ python3 train.py --dataset kitti --kitti_crop garg_crop --data_path ../data/ --max_depth 80.0 --max_depth_eval 80.0 --backbone swin_large_v2 --depths 2 2 18 2 --num_filters 32 32 32 --deconv_kernels 2 2 2 --window_size 22 22 22 11 --pretrain_window_size 12 12 12 6 --use_shift True True False False --flip_test --shift_window_test --shift_size 16 --pretrained weights/swin_v2_large_simmim.pth --save_model --crop_h 352 --crop_w 352 --layer_decay 0.85 --drop_path_rate 0.5 --log_dir logs/ 
   ```
 
 
@@ -73,7 +73,7 @@ You can download pretrained models and our well-trained models from zoo([OneDriv
 - Evaluate with model (KITTI Swin-Large)
   
   ```
-  $ python3 test.py --dataset kitti --kitti_crop garg_crop --data_path ../data/ --max_depth 80.0 --max_depth_eval 80.0 --backbone swin_base_v2 --depths 2 2 18 2 --num_filters 32 32 32 --deconv_kernels 2 2 2 --window_size 22 22 22 11 --pretrain_window_size 12 12 12 6 --use_shift True True False False --flip_test --shift_window_test --shift_size 16 --do_evaluate --ckpt_dir ckpt/kitti_swin_base.ckpt
+  $ python3 test.py --dataset kitti --kitti_crop garg_crop --data_path ../data/ --max_depth 80.0 --max_depth_eval 80.0 --backbone swin_large_v2 --depths 2 2 18 2 --num_filters 32 32 32 --deconv_kernels 2 2 2 --window_size 22 22 22 11 --pretrain_window_size 12 12 12 6 --use_shift True True False False --flip_test --shift_window_test --shift_size 16 --do_evaluate --ckpt_dir ckpt/kitti_swin_large.ckpt
   ```
 
 ### Citation
